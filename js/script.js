@@ -210,7 +210,7 @@
    ============================================================ */
 
 // Reusable building blocks to avoid repetition
-const COMMON_TOOLS = ["JIRA", "Confluence", "MS Visio", "Excel", "SQL"];
+const COMMON_TOOLS = ["MS Office", "Balsamiq", "MS Visio", "Draw.io"];
 const COMMON_ARTIFACTS = [
     { icon: "fa-file-alt", label: "BRD" },
     { icon: "fa-list-check", label: "User Stories" },
@@ -237,8 +237,8 @@ function P({ icon, title, meta, context, role, approach, artifacts, challenges, 
 const PROJECTS = {
     /* ---------- RECENT 3 (full case studies) ---------- */
     ecommerce: P({
-        icon: "fa-shopping-cart",
-        title: "E-commerce Checkout Optimization",
+        icon: "fas fa-car-side",
+        title: "Automotive Research Association of India (ARAI)",
         meta: [
             { icon: "fa-briefcase", text: "Governmnet Client" },
             { icon: "fa-clock", text: "6 months" },
@@ -246,21 +246,25 @@ const PROJECTS = {
             { icon: "fa-layer-group", text: "Hybrid Methodology" }
         ],
         context:
-            "A mid-sized e-commerce retailer was losing 68% of users at checkout. Traffic was healthy but conversions were flat. Stakeholders from marketing, operations, and engineering each had different opinions — none could agree on priorities.",
+            "The Automotive Research Association of India (ARAI) aimed to improve its digital services by streamlining business processes, enhancing user experience, and ensuring efficient coordination between stakeholders and the development team. The project focused on translating business requirements into functional solutions to improve operational efficiency and service delivery.",
         role: [
-            "Led discovery workshops with 8 stakeholders across marketing, ops, and engineering",
-            "Analysed funnel data and session recordings to identify 4 major drop-off points",
-            "Wrote the BRD and 27 user stories, prioritised using MoSCoW and RICE",
-            "Created wireframes in Figma for the redesigned 3-step checkout",
-            "Coordinated UAT with 12 pilot users and supported phased rollout"
+            "Owned end-to-end requirements for ARAI digital platform, translating needs into functional specifications.",
+            "Created BRD/SRS documents aligned with ARAI standards, ensuring traceability & stakeholder clarity.",
+            "Designed business process flows, user journeys, and wireframes using Visily.ai, Draw.io, and Figma tools",
+            "Managed stakeholder validation with ARAI officials, resolving conflicts and ensuring functional alignment.",
+            "Acted as the primary liaison between ARAI stakeholders and the development team, clarifying logic and resolving requirement gaps.",
+            "Coordinated UAT activities, including requirement clarification, defect analysis, validation, and stakeholder feedback.",
+            "Ensured documentation complied with ARAI standards, improving process quality and reducing rework by 20%."
         ],
         approach: [
-            "Discovery: stakeholder interviews, funnel analysis, session recordings",
-            "Analysis: quantified drop-off per step, mapped AS-IS vs TO-BE journey",
-            "Documentation: BRD, user stories with acceptance criteria, process flow",
-            "Design: wireframes and clickable prototype in Figma",
-            "Validation: UAT plan, test cases, defect triage with QA",
-            "Delivery: A/B test support, results analysis, documented learnings"
+            "Requirement Gathering: Conducted stakeholder discussions to understand business needs and expectations",
+            "Documentation: Prepared SRS, and functional specifications with clear requirements.",
+            "Process Design: Created process flows, user journeys, and wireframes using Visily.ai, Draw.io, and Figma.",
+            "Stakeholder Validation: Reviewed requirements with ARAI officials and incorporated feedback",
+            "Development Coordination: Worked with developers to clarify requirements and resolve gaps",
+            "UAT & Validation: Supported User Acceptance Testing (UAT) and functional validation.",
+            "Documentation & Compliance: Maintained requirement traceability and ensured alignment with ARAI standards."
+            
         ],
         artifacts: [
             { icon: "fa-file-alt", label: "SRS" },
@@ -273,26 +277,35 @@ const PROJECTS = {
         ],
         challenges: [
             {
-                title: "Conflicting priorities",
-                text: "Ran a RICE-based prioritisation workshop to align marketing and engineering on top 5 changes."
+                title: "Unclear Requirements",
+                text: "Conducted stakeholder discussions to clarify business needs and document requirements."
             },
             {
-                title: "No baseline metrics",
-                text: "Set up GA4 event tracking in week 1, established 30-day baseline, used it to prove impact."
+                title: "Stakeholder Alignment",
+                text: "Coordinated with ARAI officials and developers to resolve requirement gaps."
             },
             {
-                title: "Mobile vs desktop gap",
-                text: "Reduced mobile form from 14 to 6 fields for returning users — alone contributed 7% lift."
+                title: "Process Complexity",
+                text: "Created process flows and wireframes to simplify workflows and improve understanding."
+            },
+            {
+                title: "Requirement Changes",
+                text: "Updated documentation and maintained requirement traceability."
+            },
+            {
+                title: "Development Rework",
+                text: "Improved requirement clarity and documentation, helping reduce rework by 20%."
             }
         ],
         results: [
-            { value: "18%", label: "Cart abandonment ↓" },
-            { value: "22%", label: "Checkout completion ↑" },
-            { value: "14→6", label: "Form fields" }
+            { value: "20%", label: "Rework Reduction" },
+            { value: "25%", label: "Requirement Clarity" },
+            { value: "20%", label: "Faster Validation" },
+            { value: "15%", label: "UAT Efficiency" },
         ]
     }),
 
-    loan: P({
+   /* loan: P({
         icon: "fa-university",
         title: "Loan Origination System",
         meta: [
@@ -400,10 +413,10 @@ const PROJECTS = {
             { value: "12→34%", label: "Monthly active users" },
             { value: "−28%", label: "Front desk calls" }
         ]
-    }),
+    }),*/
 
     /* ---------- RETAIL & E-COMMERCE ---------- */
-    retailPos: P({
+    /* retailPos: P({
         icon: "fa-store",
         title: "Retail POS Integration",
         meta: [
@@ -623,10 +636,10 @@ const PROJECTS = {
                 text: "Broke rules into a testable decision table — eliminated ambiguity in dev handoff."
             }
         ]
-    }),
+    }), */
 
     /* ---------- FINANCE & BANKING ---------- */
-    coreBanking: P({
+   /* coreBanking: P({
         icon: "fa-building",
         title: "Core Banking Upgrade",
         meta: [
@@ -831,10 +844,10 @@ const PROJECTS = {
         challenges: [
             { title: "Vendor cooperation", text: "Set up a weekly vendor sync and shared a single mapping workbook." }
         ]
-    }),
+    }), */
 
     /* ---------- HEALTHCARE ---------- */
-    pharmacyMgmt: P({
+    /* pharmacyMgmt: P({
         icon: "fa-pills",
         title: "Pharmacy Management",
         meta: [
@@ -1032,9 +1045,9 @@ const PROJECTS = {
         challenges: [
             { title: "Role complexity", text: "Built a role matrix reviewed with HR to prevent access issues." }
         ]
-    }),
+    }), */
 
-    /* ---------- EDUCATION & EDTECH ---------- */
+    /* ---------- EDUCATION & EDTECH ---------- 
     universityAdmission: P({
         icon: "fa-university",
         title: "University Admission System",
@@ -1229,9 +1242,9 @@ const PROJECTS = {
         challenges: [
             { title: "Exception handling", text: "Defined exception playbooks for each bot, reviewed weekly with ops." }
         ]
-    }),
+    }), */
 
-    /* ---------- MANUFACTURING & IOT ---------- */
+    /* ---------- MANUFACTURING & IOT ---------- 
     assetTracking: P({
         icon: "fa-qrcode",
         title: "Asset Tracking RFID",
@@ -1412,9 +1425,9 @@ const PROJECTS = {
             { value: "+15%", label: "Online bookings" }
         ],
         challenges: [{ title: "Concurrency", text: "Ran load tests simulating peak booking windows." }]
-    }),
+    }), */
 
-    /* ---------- TRAVEL & HOSPITALITY ---------- */
+    /* ---------- TRAVEL & HOSPITALITY ---------- 
     ottStreaming: P({
         icon: "fa-film",
         title: "OTT Streaming Platform",
@@ -1604,9 +1617,9 @@ const PROJECTS = {
                 text: "Ran a ranking workshop with agents to define a simple, defensible ranking."
             }
         ]
-    }),
+    }), */
 
-    /* ---------- MEDIA & REAL ESTATE ---------- */
+    /* ---------- MEDIA & REAL ESTATE ----------
     constructionTracker: P({
         icon: "fa-hard-hat",
         title: "Construction Project Tracker",
@@ -1801,7 +1814,7 @@ const PROJECTS = {
         challenges: [
             { title: "Data latency", text: "Defined tiered refresh rates: real-time for outages, hourly for demand." }
         ]
-    }),
+    }), */
 
     /* ---------- REAL ESTATE / UTILITIES ---------- */
     waterBilling: P({
@@ -2056,7 +2069,7 @@ const PROJECTS = {
             { title: "Alert noise", text: "Correlated related alerts and added suppression windows for maintenance." }
         ]
     })
-};
+}; 
 
 /* ============================================================
    PROJECT MODAL – event delegation (works for all cards)
